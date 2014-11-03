@@ -10,16 +10,53 @@ Yii1 Doctrine Cache
 
 Abstract Factory + Proxy for Doctrine Cache in Yii
 
-YiiDoctrineCache implements ```Doctrine\Common\Cache\Cache``` interface 
+### When to use
+
+```YiiDoctrineCache``` implements ```Doctrine\Common\Cache\Cache``` interface 
 so it's fully compatible with all libraries that are requiring Doctrine Cache such as:
 
 - Doctrine Annotation Reader
 - Symfony Validator
 - JMS Serializer
 
-In dependency of Yii Cache configuration loads the suitable Doctrine Cache Implementation:
+### How does it works
+
+```YiiDoctrineCache``` loads the most suitable Doctrine Cache Implementation 
+in dependency of Yii Cache configuration:
 
 - ```Doctrine\Common\Cache\MemcachedCache```
 - ```Doctrine\Common\Cache\MemcacheCache```
 - ```Doctrine\Common\Cache\ArrayCache```
+
+### Advantages
+
+```YiiDoctrineCache``` uses Proxy design pattern under the hood 
+so you always have the same instance of Cache every time you call ```new YiiDoctrineCache()``` 
+even if Doctrine's ```ArrayCache``` selected
+
+```php
+
+//SomeFile.php
+use Kozz\Yii1\Cache\YiiDoctrineCache;
+
+$cache = new YiiDoctrineCache();
+$cache->save('id', 'value');
+
+//SomeOtherFile.php
+use Kozz\Yii1\Cache\YiiDoctrineCache;
+
+$cache = new YiiDoctrineCache();
+$cache->fetch('id'); // 'value'
+
+
+```
+
+### Reference
+
+Methods
+
+```fetch($id)``` - Fetches an entry from the cache
+```contains($id)``` - Test if an entry exists in the cache
+```save($id, $data, $lifeTime = false)``` - Puts data into the cache
+```delete($id)``` - Deletes a cache entry
 
