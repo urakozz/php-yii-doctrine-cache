@@ -56,7 +56,10 @@ $cache->fetch('id'); // 'value'
 Methods
 
 ```fetch($id)``` - Fetches an entry from the cache
+
 ```contains($id)``` - Test if an entry exists in the cache
+
 ```save($id, $data, $lifeTime = false)``` - Puts data into the cache
+
 ```delete($id)``` - Deletes a cache entry
 
