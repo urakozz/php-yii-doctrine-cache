@@ -1,6 +1,11 @@
-assets/*
-!assets/.gitignore
-protected/runtime/*
-!protected/runtime/.gitignore
-protected/data/*.db
-themes/classic/views/
+.idea/
+composer.lock
+phpunit.xml
+composer.phar
+composer.lock
+composer-test.lock
+vendor/
+build/
+artifacts/
+.DS_STORE
+.coveralls.yml

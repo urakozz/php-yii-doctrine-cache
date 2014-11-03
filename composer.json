@@ -1,0 +1,47 @@
+{
+  "name": "kozz/yii-doctrine-cache",
+  "type": "library",
+  "description": "Doctrine Cache Factory for Yii 1",
+  "keywords": ["Yii", "Yii1", "Doctrine", "Cache"],
+  "homepage": "http://github.com/urakozz/php-yii-doctrine-cache",
+  "license": "MIT",
+
+  "authors": [
+    {
+      "name": "Yury Kozyrev",
+      "email": "urakozz@gmail.com",
+      "homepage": "https://github.com/urakozz"
+    }
+  ],
+
+  "require": {
+    "php": ">=5.3.0",
+    "yiisoft/yii": "~1.1",
+    "doctrine/cache":"*"
+  },
+
+  "suggest": {
+    "php": ">=5.6.2"
+  },
+
+  "autoload": {
+    "psr-4": {
+      "Kozz\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Kozz\\Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.2",
+    "phpunit/phpunit-story": "*",
+    "phpunit/phpunit-selenium":"*",
+    "phpunit/dbunit":"*",
+    "phpunit/php-invoker":"*",
+    "satooshi/php-coveralls": "*"
+  },
+
+  "minimum-stability": "stable"
+}

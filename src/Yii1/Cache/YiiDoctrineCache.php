@@ -4,7 +4,7 @@
  * Date: 16/10/14
  */
 
-namespace Yii1\Cache;
+namespace Kozz\Yii1\Cache;
 
 
 use Doctrine\Common\Cache\ArrayCache;
@@ -28,7 +28,7 @@ final class YiiDoctrineCache implements Cache
   protected static $provider;
 
   /**
-   * @return \Yii1\Cache\YiiDoctrineCache
+   * @return \Kozz\Yii1\Cache\YiiDoctrineCache
    */
   public function __construct()
   {
