@@ -2,7 +2,6 @@
 composer.lock
 phpunit.xml
 composer.phar
-composer.lock
 composer-test.lock
 vendor/
 build/
