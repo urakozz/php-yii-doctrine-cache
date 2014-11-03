@@ -9,3 +9,17 @@ Yii1 Doctrine Cache
 [![License](http://img.shields.io/packagist/l/kozz/yii-doctrine-cache.svg)](https://packagist.org/packages/kozz/yii-doctrine-cache)
 
 Abstract Factory + Proxy for Doctrine Cache in Yii
+
+YiiDoctrineCache implements ```Doctrine\Common\Cache\Cache``` interface 
+so it's fully compatible with all libraries that are requiring Doctrine Cache such as:
+
+- Doctrine Annotation Reader
+- Symfony Validator
+- JMS Serializer
+
+In dependency of Yii Cache configuration loads the suitable Doctrine Cache Implementation:
+
+- ```Doctrine\Common\Cache\MemcachedCache```
+- ```Doctrine\Common\Cache\MemcacheCache```
+- ```Doctrine\Common\Cache\ArrayCache```
+
