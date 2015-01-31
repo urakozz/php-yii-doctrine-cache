@@ -8,7 +8,7 @@ Yii1 Doctrine Cache
 [![Latest Unstable Version](https://poser.pugx.org/kozz/yii-doctrine-cache/v/unstable.svg)](https://packagist.org/packages/kozz/yii-doctrine-cache)
 [![License](http://img.shields.io/packagist/l/kozz/yii-doctrine-cache.svg)](https://packagist.org/packages/kozz/yii-doctrine-cache)
 
-Abstract Factory + Proxy for Doctrine Cache in Yii
+Proxy for Doctrine Cache in Yii
 
 ### When to use
 
